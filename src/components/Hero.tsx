@@ -36,7 +36,7 @@ export function Hero() {
           <div className="hero-float hero-float-df"><span className="live-dot" /> Atendimento no DF</div>
         </div>
       </div>
-      <a className="hero-scroll" href="#beneficios" aria-label="Rolar para explorar"><span>SCROLL PARA EXPLORAR</span><ArrowDown size={14} /></a>
+      <a className="hero-scroll" href="#iphones" aria-label="Rolar para explorar"><span>SCROLL PARA EXPLORAR</span><ArrowDown size={14} /></a>
     </section>
   );
 }
