@@ -1,0 +1,25 @@
+:root{--blue:#ff6a00}
+
+/* Seven Imports — identidade visual final: preto + laranja */
+.brand-mark{background:#ff6a00!important;color:#fff;box-shadow:0 8px 24px rgba(255,106,0,.22)}
+.header-cta{background:#ff6a00!important;color:#fff;box-shadow:0 10px 28px rgba(255,106,0,.16)}
+.header-cta:hover{background:#ff7a1a!important}
+.main-nav a:hover{color:#ff6a00!important}
+.search-box:focus-within{border-color:rgba(255,106,0,.45);box-shadow:0 0 0 3px rgba(255,106,0,.08)}
+.cart-button span{background:#ff6a00!important}
+.trust-item svg,.experience-copy li svg,.hero-trust svg,.floating-note-bottom b{color:#ff6a00!important}
+.filter-row button.active{background:#ff6a00!important;border-color:#ff6a00!important}
+.text-link:hover{color:#ff6a00;border-color:#ff6a00}
+
+/* Garante que a Hero premium seja visualmente soberana sobre o Hero legado. */
+.hero-section.hero-premium{background:radial-gradient(circle at 76% 48%,#351b0b 0,#1b110a 20%,#0d0a08 45%,#070707 72%,#050505 100%)!important;color:#fff!important}
+.hero-section.hero-premium:before,.hero-section.hero-premium:after{display:none!important}
+.hero-section.hero-premium .hero-grid{position:relative;z-index:2}
+.hero-section.hero-premium h1{color:#f7f7f7!important}
+.hero-section.hero-premium h1 span{color:#ff6a00!important}
+.hero-section.hero-premium .hero-primary{background:#ff6a00!important;color:#fff!important}
+.hero-section.hero-premium .hero-primary:hover{background:#ff7a1a!important}
+.hero-section.hero-premium .hero-eyebrow i,.hero-section.hero-premium .hero-trust svg{color:#ff6a00!important}
+.hero-section.hero-premium .hero-scroll svg{color:#ff6a00!important}
+
+@media(max-width:780px){.main-nav{background:#fff}.header-cta{background:#ff6a00!important}}
