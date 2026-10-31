@@ -17,7 +17,7 @@ export default function App() {
   const [query, setQuery] = useState('');
 
   return <div className="app">
-    <div className="announcement"><span>SEVEN IMPORTS · DISTRITO FEDERAL</span><strong>Produtos selecionados · Atendimento próximo</strong></div>
+    <div className="announcement"><span>CURADORIA PREMIUM</span><strong>ENVIO PARA TODO O BRASIL</strong></div>
     <Header onSearch={setQuery} />
     <main>
       <Hero />
