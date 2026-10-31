@@ -1,386 +1,684 @@
-# Seven Imports — Prompt mestre para criação do site
+# Seven Imports — Prompt Master da Home Premium
 
-## Objetivo
+## Missão
 
-Criar um e-commerce premium, moderno e confiável para a **Seven Imports**, uma loja brasileira de produtos importados. O site deve transmitir a sensação de uma marca estabelecida, profissional e confiável, sem parecer um template genérico de loja virtual.
+Atue simultaneamente como **Product Designer sênior, UI/UX Designer, Art Director, Motion Designer e Frontend Engineer**.
 
-O projeto deve ser responsivo, rápido, acessível, preparado para SEO e estruturado para crescer posteriormente para catálogo maior, checkout, painel administrativo, pedidos, clientes e integrações de pagamento/entrega.
+Crie/reconstrua a Home da **Seven Imports**, revendedora independente de iPhones e produtos Apple com atuação no Distrito Federal.
 
-## Direção visual
+O resultado não pode parecer um template genérico de e-commerce. Deve parecer o site oficial de uma marca de tecnologia premium, com forte hierarquia visual, excelente UX, conversão natural, performance e arquitetura pronta para evoluir.
 
-- Estética: premium, tecnológica, urbana e minimalista.
-- Aparência de marca real, não de projeto de IA/template.
-- Fundo predominantemente claro, com grandes áreas de respiro e blocos escuros usados para contraste.
-- Paleta principal: preto/grafite, branco e detalhes em azul elétrico ou azul profundo.
-- Bordas discretamente arredondadas.
-- Sombras suaves e profundidade elegante.
-- Tipografia moderna, forte nos títulos e extremamente legível no corpo.
-- Microinterações rápidas e discretas.
-- Animações somente quando melhorarem a experiência; não exagerar em efeitos.
-- Usar imagens grandes e profissionais dos produtos.
-- Não usar ícones clichês de importação, avião, navio ou bandeiras como identidade principal.
-- Não utilizar emojis como elementos de interface.
+## Objetivo da experiência
 
-## Marca
+Ao entrar, o visitante deve perceber imediatamente:
 
-Nome da marca: **SEVEN IMPORTS**
+> **“Essa empresa é séria, moderna e vende tecnologia premium.”**
 
-Criar uma identidade visual coerente com o nome. O logotipo deve funcionar em versão horizontal e compacta. Dar preferência a um símbolo geométrico/monograma baseado no número 7 ou nas iniciais SI, com acabamento premium.
+A experiência deve transmitir:
 
-O logo deve aparecer no header, footer, favicon e telas de estados vazios quando apropriado.
+- confiança;
+- sofisticação;
+- tecnologia;
+- segurança;
+- transparência;
+- desejo de compra;
+- atendimento personalizado.
 
-## Estrutura do site
+A estética combina conceitualmente **Apple Premium + Luxury Tech + e-commerce moderno + editorial de tecnologia**, sem copiar nenhuma marca.
 
-### 1. Header
+---
 
-Criar header premium e responsivo com:
+## 1. Direção visual
 
-- Logo Seven Imports.
-- Busca de produtos em destaque.
-- Categorias.
-- Ofertas.
-- Novidades.
-- Ícone de conta.
-- Ícone de favoritos.
-- Carrinho com contador.
-- Menu mobile elegante.
+Criar uma identidade extremamente limpa e sofisticada.
 
-No desktop, o header pode ter uma primeira faixa pequena para comunicação comercial e uma segunda faixa principal para navegação.
+### Paleta
 
-### 2. Hero
+Base:
 
-Criar uma seção hero visualmente forte.
+- branco;
+- off-white;
+- preto;
+- cinza neutro;
+- azul profundo da Seven Imports.
 
-Headline sugerida:
+Usar azul estrategicamente em CTAs, links, estados ativos e elementos de destaque. Evitar excesso de azul.
 
-**Os produtos que você procura. Do mundo para você.**
+### Tipografia
+
+Usar tipografia moderna e sofisticada, com títulos fortes, grandes e editoriais e corpo extremamente legível.
+
+Estabelecer uma hierarquia clara entre eyebrow, H1, H2, H3, body, labels, preços e CTAs.
+
+### Design system
+
+Antes de construir os componentes, definir tokens reutilizáveis para:
+
+- cores;
+- tipografia;
+- espaçamento;
+- border radius;
+- sombras;
+- botões;
+- inputs;
+- cards;
+- badges;
+- transições;
+- breakpoints.
+
+Não espalhar valores aleatórios pelo código.
+
+---
+
+## 2. Header
+
+Criar header premium, minimalista e sticky.
+
+### Desktop
+
+Logo:
+
+**SEVEN IMPORTS**
+
+Navegação:
+
+- Início
+- iPhones
+- Apple
+- Acessórios
+- Ofertas
+- Sobre
+
+Área de ações:
+
+- pesquisa;
+- favoritos;
+- carrinho;
+- botão **Falar conosco**.
+
+No topo, o header pode ser transparente/semitransparente. Ao rolar, transformar suavemente em fundo branco translúcido com blur e sombra mínima.
+
+### Mobile
+
+Mostrar logo, pesquisa, carrinho e menu.
+
+O menu mobile deve abrir como uma experiência premium fullscreen, com boa hierarquia, áreas de toque confortáveis e animação discreta.
+
+---
+
+## 3. Hero — impacto imediato
+
+Criar um Hero de aproximadamente **80–90vh**.
+
+### Conteúdo esquerdo
+
+Eyebrow:
+
+**SEVEN IMPORTS • DISTRITO FEDERAL**
+
+H1:
+
+# Seu próximo iPhone está aqui.
 
 Subheadline:
 
-**Produtos importados selecionados, compra segura e uma experiência feita para quem não aceita o comum.**
+**Tecnologia, procedência e atendimento de confiança para você escolher seu próximo aparelho com tranquilidade.**
 
 CTAs:
 
-- **Comprar agora**
-- **Ver ofertas**
+**Ver iPhones →**
 
-Utilizar composição editorial com produto em destaque, iluminação sofisticada, gradientes sutis e elementos geométricos.
+**Falar com a Seven**
 
-Não deixar o hero com aparência de banco de imagens genérico.
+Microcopy:
 
-### 3. Categorias
+**Atendimento personalizado • Distrito Federal**
 
-Criar cards visuais para categorias. Como o catálogo real ainda será definido, usar categorias editáveis e dados mockados claramente separados da lógica do sistema.
+### Conteúdo direito
 
-Sugestões iniciais:
+Criar composição de publicidade premium com um iPhone moderno como protagonista.
 
-- Eletrônicos
+O aparelho deve parecer fotografado em estúdio, com iluminação sofisticada, profundidade, sombra realista e leve sensação de flutuação.
+
+Adicionar cards discretos ao redor:
+
+- **Compra segura**
+- **Produtos selecionados**
+- **Atendimento no DF**
+
+Não transformar o Hero em uma colagem. O produto deve continuar sendo o protagonista.
+
+### Motion
+
+Entrada progressiva: eyebrow → headline → texto → CTAs → produto → cards.
+
+Adicionar floating extremamente suave e, no desktop, uma reação sutil ao cursor se isso não prejudicar performance.
+
+No mobile, reduzir efeitos pesados.
+
+---
+
+## 4. Trust Bar
+
+Logo abaixo do Hero, criar uma barra de confiança com quatro itens:
+
+### Compra segura
+Experiência transparente.
+
+### Produtos selecionados
+Curadoria de tecnologia.
+
+### Atendimento no DF
+Atendimento próximo.
+
+### Suporte
+Estamos aqui para ajudar.
+
+Usar ícones minimalistas, sem emojis.
+
+---
+
+## 5. Categorias
+
+Título:
+
+# Encontre o que procura.
+
+Subtítulo:
+
+**Explore nossa seleção de tecnologia.**
+
+Criar quatro cards grandes:
+
+### iPhone
+Seu próximo smartphone.
+
+### Apple
+Tecnologia para todos os momentos.
+
+### Acessórios
+Complete sua experiência.
+
+### Ofertas
+Oportunidades selecionadas.
+
+Cards com imagens grandes e premium.
+
+Hover:
+
+- zoom de 3–5%;
+- elevação mínima;
+- sombra suave;
+- seta com pequeno deslocamento;
+- overlay discreto.
+
+---
+
+## 6. Campanha / produto em destaque
+
+Criar uma seção de alto impacto com fundo azul profundo.
+
+Título:
+
+# O próximo nível está aqui.
+
+Texto:
+
+**Escolha tecnologia que acompanha o seu ritmo.**
+
+CTA:
+
+**Explorar iPhones →**
+
+No lado direito, mostrar um iPhone em destaque com iluminação/glow muito sutil.
+
+A seção deve parecer uma campanha publicitária premium, não um banner tradicional.
+
+---
+
+## 7. Produtos mais procurados
+
+Título:
+
+# Mais procurados
+
+Subtítulo:
+
+**Conheça alguns dos produtos disponíveis na Seven Imports.**
+
+Grid:
+
+- desktop: 4 colunas;
+- tablet: 2 colunas;
+- mobile: 2 colunas quando houver espaço suficiente.
+
+Cada card deve ter:
+
+- imagem;
+- badge opcional;
+- nome;
+- modelo;
+- capacidade;
+- cor;
+- preço ou **Consultar disponibilidade**;
+- favorito;
+- **Ver produto**.
+
+Não inventar estoque, preços ou condições comerciais reais. Se o catálogo real ainda não estiver conectado, usar dados demonstrativos estruturados para substituição posterior.
+
+### Product Card
+
+Prioridade visual:
+
+**imagem → produto → informações → preço → ação**
+
+Hover:
+
+- zoom suave;
+- segunda imagem se existir;
+- ação rápida;
+- feedback discreto.
+
+---
+
+## 8. Experiência Seven
+
+Criar uma seção editorial com imagem grande de um lado e conteúdo do outro.
+
+Eyebrow:
+
+**A EXPERIÊNCIA SEVEN**
+
+Título:
+
+# Mais do que vender tecnologia.
+
+Texto:
+
+**Queremos tornar sua escolha mais simples, transparente e segura. Cada atendimento deve ser uma experiência clara, próxima e profissional.**
+
+Benefícios:
+
+- Atendimento personalizado
+- Transparência
+- Produtos selecionados
+- Experiência premium
+
+CTA:
+
+**Conheça a Seven Imports →**
+
+---
+
+## 9. Por que Seven?
+
+Título:
+
+# Por que Seven?
+
+Criar quatro blocos editoriais:
+
+**01 — Confiança**  
+Transparência em cada etapa.
+
+**02 — Curadoria**  
+Produtos selecionados com atenção.
+
+**03 — Atendimento**  
+Suporte próximo e personalizado.
+
+**04 — Experiência**  
+Uma experiência digital moderna.
+
+Usar números grandes e elegantes, evitando aparência de dashboard.
+
+---
+
+## 10. CTA de conversão
+
+Criar uma seção forte antes do Footer.
+
+Título:
+
+# Procurando um iPhone específico?
+
+Texto:
+
+**Fale com nossa equipe e consulte modelos, disponibilidade e condições.**
+
+CTA:
+
+**Falar com a Seven →**
+
+Microcopy:
+
+**Atendimento personalizado no Distrito Federal.**
+
+---
+
+## 11. WhatsApp
+
+Preparar integração usando:
+
+`VITE_WHATSAPP_NUMBER`
+
+Criar função reutilizável:
+
+`openWhatsApp(message?)`
+
+Mensagem padrão:
+
+**Olá! Gostaria de consultar a disponibilidade de um iPhone.**
+
+Nunca inventar telefone. Se a variável não estiver configurada, não criar link quebrado; usar fallback apropriado apenas em desenvolvimento.
+
+---
+
+## 12. Footer
+
+Criar Footer premium.
+
+Logo:
+
+**SEVEN IMPORTS**
+
+Descrição:
+
+**Tecnologia, confiança e atendimento próximo no Distrito Federal.**
+
+Colunas:
+
+### Loja
+- iPhones
+- Apple
 - Acessórios
-- Casa & Lifestyle
-- Beleza
-- Games
-- Tecnologia
 - Ofertas
 
-As categorias devem ser facilmente substituíveis no futuro.
+### Seven
+- Sobre nós
+- Contato
+- Política de Privacidade
+- Termos
 
-### 4. Produtos em destaque
+### Atendimento
+- WhatsApp
+- Instagram
+- Horários
 
-Criar grid de produtos premium com:
+Final:
 
-- Foto.
-- Nome.
-- Categoria.
-- Preço atual.
-- Preço anterior quando houver.
-- Percentual de desconto.
-- Parcelamento.
-- Avaliação.
-- Botão adicionar ao carrinho.
-- Favoritar.
-- Badge de oferta/novo quando aplicável.
+**© 2026 Seven Imports. Todos os direitos reservados.**
 
-Criar estados para:
+Aviso:
 
-- produto em estoque;
-- estoque baixo;
-- esgotado;
-- pré-venda.
+**Seven Imports é uma revendedora independente. Apple, iPhone e demais marcas são marcas de seus respectivos proprietários.**
 
-### 5. Banner de ofertas
+---
 
-Criar uma seção visual para promoções com contador opcional.
+## 13. Microinterações
 
-Exemplo:
+Adicionar microinterações refinadas:
 
-**OFERTAS SEVEN**
+- botões com elevação mínima no hover;
+- links com underline animado;
+- cards com movimento mínimo;
+- imagens com zoom suave;
+- favoritos com pequena animação;
+- feedback visual ao adicionar ao carrinho;
+- header com transição suave no scroll;
+- seções com reveal progressivo.
 
-**Até 40% OFF em produtos selecionados.**
+Tudo deve ser rápido e sofisticado.
 
-CTA: **Ver ofertas**
+---
 
-O conteúdo deve ser configurável.
+## 14. Scroll storytelling
 
-### 6. Diferenciais
+A Home deve contar uma história:
 
-Criar seção com quatro diferenciais:
+**Hero** → quem somos e proposta de valor.
 
-- Compra segura.
-- Produtos selecionados.
-- Envio para todo o Brasil.
-- Atendimento especializado.
+**Categorias** → o que vendemos.
 
-Evitar promessas que não estejam confirmadas no sistema. Deixar textos facilmente editáveis.
+**Produtos** → o que o usuário pode comprar.
 
-### 7. Seção institucional
+**Experiência** → como atendemos.
 
-Criar uma seção curta apresentando a Seven Imports.
+**Confiança** → por que confiar.
 
-Texto-base:
+**CTA** → como entrar em contato.
 
-**Importar é encontrar o que existe de melhor no mundo.**
+O usuário deve chegar naturalmente à conversão.
 
-A Seven Imports nasceu para aproximar produtos desejados dos consumidores brasileiros, combinando curadoria, tecnologia e uma experiência de compra simples e segura.
+---
 
-CTA: **Conheça a Seven Imports**
+## 15. Responsividade
 
-Não inventar história, números, endereço, CNPJ ou anos de mercado.
+Não simplesmente reduzir o desktop. Criar experiência mobile própria.
 
-### 8. Newsletter
+Considerar:
 
-Criar bloco de captura de e-mail:
+- 320px;
+- 375px;
+- 390px;
+- 430px;
+- 768px;
+- 1024px;
+- 1366px;
+- 1440px;
+- 1920px.
 
-**Receba as próximas novidades da Seven.**
+No mobile:
 
-Campo de e-mail + botão **Quero receber**.
+- Hero vertical;
+- produto centralizado;
+- CTAs grandes;
+- menu fullscreen;
+- cards confortáveis;
+- textos legíveis;
+- navegação simples.
 
-Preparar estrutura para integração futura.
+---
 
-### 9. Footer
-
-Footer completo com:
-
-- Logo.
-- Sobre a Seven Imports.
-- Atendimento.
-- Institucional.
-- Políticas.
-- Privacidade.
-- Termos.
-- Trocas e devoluções.
-- Redes sociais.
-- Formas de pagamento (somente placeholders configuráveis).
-- Copyright.
-
-Não inventar links, dados legais ou redes sociais reais.
-
-## Páginas
-
-Implementar arquitetura preparada para as seguintes páginas:
-
-- `/` — Home
-- `/produtos` — catálogo
-- `/produto/:slug` — produto
-- `/categoria/:slug` — categoria
-- `/ofertas` — ofertas
-- `/favoritos` — favoritos
-- `/carrinho` — carrinho
-- `/checkout` — checkout preparado para integração
-- `/minha-conta` — conta do cliente
-- `/pedidos` — pedidos
-- `/sobre` — institucional
-- `/contato` — contato
-- `/politica-de-privacidade`
-- `/termos-de-uso`
-- `/trocas-e-devolucoes`
-
-Se alguma integração não estiver disponível, criar a interface e a camada de serviço preparada para integração posterior, sem fingir que o pagamento ou envio está funcionando.
-
-## Catálogo
-
-Criar dados tipados para produtos contendo pelo menos:
-
-- id
-- slug
-- nome
-- descrição curta
-- descrição completa
-- preço
-- preço anterior
-- desconto
-- imagens
-- categoria
-- marca
-- SKU
-- estoque
-- avaliação
-- número de avaliações
-- tags
-- status
-
-Criar filtros por:
-
-- categoria;
-- preço;
-- marca;
-- avaliação;
-- disponibilidade;
-- ofertas.
-
-Criar ordenação por:
-
-- relevância;
-- menor preço;
-- maior preço;
-- mais recentes;
-- mais vendidos.
-
-Criar busca com estado de carregamento, resultados e estado sem resultados.
-
-## Carrinho
-
-Implementar carrinho funcional no frontend:
-
-- adicionar produto;
-- remover produto;
-- alterar quantidade;
-- subtotal;
-- desconto;
-- frete placeholder;
-- total;
-- persistência local enquanto não houver backend.
-
-Preparar arquitetura para posterior integração com backend/banco de dados.
-
-## UX
-
-A experiência precisa parecer de uma grande loja online:
-
-- skeleton loading;
-- estados vazios;
-- mensagens de erro elegantes;
-- feedback ao adicionar produto;
-- toast discreto;
-- navegação mobile excelente;
-- acessibilidade básica;
-- foco visível;
-- contraste adequado;
-- botões com estados hover/active/disabled;
-- imagens com lazy loading quando apropriado.
-
-## Responsividade
-
-Prioridade absoluta para:
-
-- desktop;
-- notebook;
-- tablet;
-- celular.
-
-No mobile, não simplesmente reduzir o desktop. Reorganizar os componentes para uma experiência de e-commerce realmente mobile-first.
-
-## SEO
+## 16. Acessibilidade
 
 Implementar:
 
-- títulos por página;
-- meta descriptions;
-- Open Graph;
-- URLs amigáveis;
-- sitemap preparado;
-- robots preparado;
-- dados estruturados de produto quando houver dados suficientes;
-- headings semânticos;
-- alt text nas imagens.
+- HTML semântico;
+- aria-label quando necessário;
+- contraste adequado;
+- foco visível;
+- navegação por teclado;
+- alt text;
+- labels em formulários;
+- botões e links semânticos.
 
-## Performance
+Não usar `div` clicável quando `button` ou `a` for apropriado.
+
+---
+
+## 17. Performance
 
 Priorizar:
 
-- componentes leves;
 - lazy loading;
-- imagens otimizadas;
-- evitar bibliotecas desnecessárias;
-- evitar animações pesadas;
-- evitar efeitos que prejudiquem Core Web Vitals.
-
-## Tecnologia
-
-Se o projeto estiver sendo criado do zero, preferir:
-
-- React + TypeScript;
-- Vite;
-- Tailwind CSS;
+- imagens responsivas;
+- code splitting quando necessário;
 - componentes reutilizáveis;
-- arquitetura organizada por features/components/pages;
-- lucide-react ou biblioteca de ícones equivalente e leve;
-- gerenciamento de estado simples e apropriado ao tamanho do projeto.
+- animações com transform/opacity;
+- poucas dependências;
+- assets otimizados;
+- baixo layout shift.
 
-Não instalar dependências desnecessárias.
+A Home precisa ser premium e rápida.
 
-## Arquitetura
+---
 
-Organizar o código para facilitar evolução futura:
+## 18. SEO
 
-- `src/components`
-- `src/pages`
-- `src/features`
-- `src/data`
-- `src/lib`
-- `src/hooks`
-- `src/types`
-- `src/assets`
+Title:
 
-Separar dados mockados da UI para que o catálogo real possa ser conectado depois.
+**Seven Imports | iPhones e Tecnologia no Distrito Federal**
 
-## Segurança
+Description:
 
-- Nunca colocar chaves privadas no frontend.
-- Nunca colocar tokens secretos no código.
-- Usar `.env.example` para variáveis necessárias.
-- Validar entradas de formulários.
-- Não armazenar dados sensíveis do cliente de forma insegura.
+**Seven Imports — iPhones e produtos de tecnologia com atendimento próximo, transparência e experiência premium no Distrito Federal.**
 
-## Conteúdo
+Implementar:
 
-Todo texto deve estar em **português do Brasil**.
+- H1 único;
+- H2 nas seções;
+- alt text;
+- Open Graph;
+- canonical configurável;
+- HTML semântico.
 
-Não inventar:
+---
 
-- CNPJ;
+## 19. Arquitetura
+
+Não colocar toda a aplicação em um único arquivo.
+
+Estruturar, quando compatível com o projeto existente:
+
+```text
+src/
+├── components/
+│   ├── Header.tsx
+│   ├── Hero.tsx
+│   ├── TrustBar.tsx
+│   ├── CategoryGrid.tsx
+│   ├── ProductCard.tsx
+│   ├── FeaturedProducts.tsx
+│   ├── CampaignBanner.tsx
+│   ├── ExperienceSection.tsx
+│   ├── WhySeven.tsx
+│   ├── WhatsAppCTA.tsx
+│   ├── Footer.tsx
+│   └── CartDrawer.tsx
+│
+├── data/
+│   └── products.ts
+├── hooks/
+│   └── useCart.ts
+├── lib/
+│   ├── format.ts
+│   └── whatsapp.ts
+├── types/
+│   └── product.ts
+└── pages/
+    └── Home.tsx
+```
+
+Reutilizar componentes existentes quando fizer sentido. Não apagar funcionalidades existentes sem necessidade.
+
+---
+
+## 20. Catálogo preparado para escalar
+
+Preparar estrutura para futuramente receber:
+
+- banco de dados;
+- estoque;
+- SKU;
+- capacidade;
+- cor;
+- condição;
+- preço;
+- desconto;
+- imagens;
+- disponibilidade;
+- pedidos;
+- clientes;
+- checkout;
+- pagamentos.
+
+Separar dados mockados da UI.
+
+---
+
+## 21. Regras comerciais e de conteúdo
+
+A Seven Imports é uma revendedora independente.
+
+Nunca afirmar que é Apple Store, Apple Authorized Reseller ou assistência autorizada sem comprovação.
+
+Nunca inventar:
+
+- estoque;
+- preços reais;
 - endereço;
 - telefone;
 - avaliações reais;
 - quantidade de clientes;
-- número de pedidos;
 - certificações;
 - parceiros;
-- marcas autorizadas;
-- garantias que não tenham sido fornecidas.
+- garantias específicas;
+- CNPJ.
 
-Quando uma informação real ainda não estiver disponível, usar conteúdo neutro e claramente configurável.
+Quando uma informação real ainda não estiver disponível, usar conteúdo neutro e configurável.
+
+Todo texto deve estar em português do Brasil.
+
+---
+
+## 22. Critério de qualidade
+
+Antes de considerar a Home concluída, revisar como Product Designer sênior:
+
+- hierarquia visual;
+- consistência;
+- espaçamento;
+- tipografia;
+- contraste;
+- responsividade;
+- acessibilidade;
+- conversão;
+- performance;
+- microinterações;
+- loading;
+- estados vazios;
+- erro;
+- hover;
+- navegação;
+- CTA.
+
+Corrigir inconsistências encontradas.
+
+---
+
+## Regra de ouro
+
+Para cada elemento, perguntar:
+
+**Isso melhora clareza, confiança, conversão ou experiência?**
+
+Se não melhorar nenhuma delas, remover.
+
+Quero menos elementos, porém muito melhor executados.
+
+---
 
 ## Resultado esperado
 
-O resultado final deve parecer um e-commerce premium pronto para uma marca brasileira de importados, com design digno de uma empresa real e estrutura técnica preparada para produção.
+A Home final deve parecer uma marca real de tecnologia premium:
 
-Antes de considerar concluído:
+**premium · minimalista · tecnológica · sofisticada · comercial · confiável · rápida · responsiva**
 
-1. Rodar o build.
-2. Corrigir todos os erros TypeScript/ESLint/build.
-3. Verificar rotas.
-4. Verificar responsividade.
-5. Verificar navegação do carrinho.
-6. Verificar estados de loading/erro/vazio.
-7. Verificar SEO básico.
-8. Verificar acessibilidade básica.
-9. Remover textos de placeholder visíveis que pareçam inacabados.
-10. Não deixar links quebrados.
-11. Não criar funcionalidades falsas: se algo depender de backend, deixar a integração claramente preparada.
-12. Manter o código limpo e modular.
+Não quero:
 
-## Regra de trabalho do projeto
+- template genérico;
+- marketplace barato;
+- excesso de cards;
+- gradientes exagerados;
+- animações chamativas;
+- visual de loja de informática;
+- interface poluída.
 
-Este repositório é a fonte de verdade do projeto Seven Imports. Toda alteração deve ser feita dentro deste projeto, mantendo o histórico de alterações e evitando apagar funcionalidades existentes sem necessidade.
+Quero uma experiência que poderia ser lançada comercialmente hoje.
 
-Ao implementar novas funcionalidades, primeiro analisar a estrutura existente, reutilizar componentes quando possível e preservar o que já estiver funcionando.
+Tome decisões de UI/UX como um designer sênior. Se uma solução puder ficar mais bonita, clara ou profissional sem prejudicar a identidade da Seven Imports, melhore por conta própria.
+
+## Regra do repositório
+
+Este repositório é a fonte de verdade do projeto Seven Imports. Toda alteração deve permanecer no repositório, preservando funcionalidades existentes e mantendo o código organizado para evolução futura.
