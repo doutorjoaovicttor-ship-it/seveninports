@@ -1,0 +1,38 @@
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import { Search, ShoppingBag, UserRound, Heart, Menu, ArrowRight, Star, ShieldCheck, Truck, Headphones, Sparkles, Plus, Minus, X } from 'lucide-react';
+import './styles.css';
+
+type Product={id:number;name:string;category:string;price:number;oldPrice?:number;image:string;rating:number;badge?:string};
+const products:Product[]=[
+{id:1,name:'Fone Bluetooth Pro',category:'Eletrônicos',price:349.9,oldPrice:429.9,image:'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=85',rating:4.9,badge:'Oferta'},
+{id:2,name:'Smartwatch Series X',category:'Tecnologia',price:599.9,oldPrice:699.9,image:'https://images.unsplash.com/photo-1544117519-31a4b719223d?auto=format&fit=crop&w=900&q=85',rating:4.8,badge:'Novo'},
+{id:3,name:'Óculos Urban Black',category:'Acessórios',price:229.9,image:'https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=900&q=85',rating:4.7},
+{id:4,name:'Câmera Instantânea',category:'Lifestyle',price:489.9,oldPrice:559.9,image:'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=900&q=85',rating:4.9},
+];
+const categories=['Eletrônicos','Acessórios','Casa & Lifestyle','Beleza','Games','Tecnologia'];
+const money=(v:number)=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+function App(){
+ const [cart,setCart]=useState<Product[]>([]); const [search,setSearch]=useState(''); const [menu,setMenu]=useState(false); const [fav,setFav]=useState<number[]>([]);
+ const filtered=products.filter(p=>p.name.toLowerCase().includes(search.toLowerCase())||p.category.toLowerCase().includes(search.toLowerCase()));
+ const add=(p:Product)=>setCart(c=>[...c,p]);
+ return <div className="app">
+  <div className="topbar">CURADORIA PREMIUM • ENVIO PARA TODO O BRASIL <span>Conheça a Seven Imports</span></div>
+  <header className="header"><button className="mobile-btn" onClick={()=>setMenu(!menu)}><Menu/></button><a className="logo" href="#"><b>7</b><span>SEVEN<small>IMPORTS</small></span></a>
+   <nav className={menu?'nav open':'nav'}><a href="#produtos">Produtos</a><a href="#categorias">Categorias</a><a href="#ofertas">Ofertas</a><a href="#sobre">Sobre</a></nav>
+   <div className="actions"><div className="search"><Search size={18}/><input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Buscar produtos..."/></div><button aria-label="Conta"><UserRound/></button><button aria-label="Favoritos"><Heart/></button><button className="cart" aria-label="Carrinho"><ShoppingBag/><i>{cart.length}</i></button></div>
+  </header>
+  <main>
+   <section className="hero"><div className="hero-copy"><span className="eyebrow"><Sparkles size={15}/> CURADORIA SEVEN</span><h1>O mundo que você procura.<br/><em>Mais perto de você.</em></h1><p>Produtos importados selecionados para quem busca tecnologia, estilo e novidades sem abrir mão de uma experiência premium.</p><div className="hero-buttons"><a className="btn primary" href="#produtos">Comprar agora <ArrowRight size={18}/></a><a className="btn ghost" href="#ofertas">Ver ofertas</a></div></div><div className="hero-art"><div className="orb"></div><div className="hero-card"><span>SEVEN</span><strong>SELECT</strong><small>Curadoria internacional</small></div></div></section>
+   <section className="trust"><div><ShieldCheck/><span><b>Compra segura</b><small>Experiência protegida</small></span></div><div><Truck/><span><b>Envio nacional</b><small>Para todo o Brasil</small></span></div><div><Star/><span><b>Produtos selecionados</b><small>Curadoria Seven</small></span></div><div><Headphones/><span><b>Atendimento</b><small>Estamos aqui para ajudar</small></span></div></section>
+   <section id="categorias" className="section"><div className="section-head"><div><span className="eyebrow">EXPLORE</span><h2>Escolha seu universo.</h2></div><a href="#produtos">Ver tudo <ArrowRight size={16}/></a></div><div className="categories">{categories.map((c,i)=><a key={c} href="#produtos" className="category"><span>0{i+1}</span><b>{c}</b><ArrowRight size={18}/></a>)}</div></section>
+   <section id="produtos" className="section products-section"><div className="section-head"><div><span className="eyebrow">SELEÇÃO SEVEN</span><h2>Produtos em destaque.</h2></div><a href="#produtos">Ver catálogo <ArrowRight size={16}/></a></div><div className="products">{filtered.map(p=><article className="product" key={p.id}><div className="product-image"><img src={p.image} alt={p.name}/>{p.badge&&<label>{p.badge}</label>}<button className={fav.includes(p.id)?'fav active':'fav'} onClick={()=>setFav(f=>f.includes(p.id)?f.filter(x=>x!==p.id):[...f,p.id])}><Heart size={18}/></button></div><div className="product-info"><small>{p.category}</small><h3>{p.name}</h3><div className="rating"><Star size={14} fill="currentColor"/> {p.rating}</div><div className="price">{money(p.price)} {p.oldPrice&&<del>{money(p.oldPrice)}</del>}</div><button className="add" onClick={()=>add(p)}>Adicionar ao carrinho <Plus size={17}/></button></div></article>)}</div>{filtered.length===0&&<div className="empty">Nenhum produto encontrado para “{search}”.</div>}</section>
+   <section id="ofertas" className="offer"><div><span className="eyebrow">OFERTAS SEVEN</span><h2>Até <strong>40% OFF</strong><br/>em produtos selecionados.</h2><p>Descubra oportunidades especiais enquanto durarem os estoques.</p><a className="btn light" href="#produtos">Explorar ofertas <ArrowRight size={18}/></a></div><div className="offer-number">07</div></section>
+   <section id="sobre" className="about"><div className="about-mark">7</div><div><span className="eyebrow">SOBRE A SEVEN</span><h2>Importar é encontrar o que existe de melhor no mundo.</h2><p>A Seven Imports aproxima produtos desejados dos consumidores brasileiros, combinando curadoria, tecnologia e uma experiência de compra simples e segura.</p><a href="#" className="text-link">Conheça a Seven Imports <ArrowRight size={17}/></a></div></section>
+   <section className="newsletter"><div><span className="eyebrow">SEVEN NEWS</span><h2>Fique por dentro das próximas novidades.</h2></div><form onSubmit={e=>e.preventDefault()}><input type="email" placeholder="Seu melhor e-mail" required/><button>Quero receber <ArrowRight size={17}/></button></form></section>
+  </main>
+  <footer><div className="footer-main"><div><a className="logo footer-logo"><b>7</b><span>SEVEN<small>IMPORTS</small></span></a><p>Produtos importados selecionados.<br/>Uma experiência feita para quem não aceita o comum.</p></div><div><b>Comprar</b><a href="#produtos">Produtos</a><a href="#categorias">Categorias</a><a href="#ofertas">Ofertas</a></div><div><b>Institucional</b><a href="#sobre">Sobre nós</a><a href="#">Privacidade</a><a href="#">Termos de uso</a></div><div><b>Atendimento</b><a href="#">Fale conosco</a><a href="#">Trocas e devoluções</a></div></div><div className="footer-bottom"><span>© 2026 Seven Imports. Todos os direitos reservados.</span><span>Feito para uma nova experiência de compra.</span></div></footer>
+  {cart.length>0&&<aside className="cart-drawer"><div><b>Seu carrinho</b><button onClick={()=>setCart([])}><X size={18}/></button></div>{cart.map((p,i)=><div className="cart-item" key={`${p.id}-${i}`}><img src={p.image}/><span>{p.name}<small>{money(p.price)}</small></span></div>)}<div className="cart-total"><span>Total</span><b>{money(cart.reduce((s,p)=>s+p.price,0))}</b></div><button className="checkout">Continuar para checkout</button></aside>}
+ </div>
+}
+createRoot(document.getElementById('root')!).render(<React.StrictMode><App/></React.StrictMode>);
