@@ -2,6 +2,18 @@
 
 Site/e-commerce premium da **Seven Imports**, revendedora independente de iPhones e produtos Apple no Distrito Federal.
 
+## Direção do produto
+
+A Home segue uma direção de **luxury tech minimalista**, com foco em:
+
+- fotografia e destaque do produto;
+- tipografia editorial;
+- espaço negativo e hierarquia clara;
+- motion discreto;
+- confiança e conversão;
+- experiência responsiva mobile-first;
+- arquitetura preparada para evoluir para e-commerce completo.
+
 ## Posicionamento
 
 - confiança, procedência e transparência;
@@ -14,7 +26,16 @@ Site/e-commerce premium da **Seven Imports**, revendedora independente de iPhone
 
 ## Stack
 
-React + TypeScript + Vite + CSS responsivo.
+React + TypeScript + Vite + CSS responsivo + Lucide Icons.
+
+## Estrutura principal
+
+- `src/components/` — componentes da Home e experiência de e-commerce;
+- `src/data/products.ts` — catálogo demonstrativo substituível pelo catálogo real;
+- `src/types/product.ts` — modelos de dados;
+- `src/lib/whatsapp.ts` — integração configurável com WhatsApp;
+- `src/App.tsx` — composição da Home;
+- `src/styles.css` — Design System e responsividade.
 
 ## Desenvolvimento
 
@@ -29,6 +50,16 @@ npm run dev
 npm run build
 npm run preview
 ```
+
+## WhatsApp
+
+Configure `VITE_WHATSAPP_NUMBER` em `.env` usando o número em formato internacional, somente dígitos.
+
+O projeto não contém número fictício no código.
+
+## Dados demonstrativos
+
+O catálogo atual usa dados e imagens demonstrativos. Não foram adicionados preços ou estoque inventados. Antes do lançamento, substituir os produtos por dados reais.
 
 ## Próximas integrações
 
