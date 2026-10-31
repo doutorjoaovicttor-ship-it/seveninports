@@ -1,32 +1,9 @@
-import React, { useState } from 'react';
+import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { ArrowRight, Check, Menu, MessageCircle, Search, ShieldCheck, Smartphone, X } from 'lucide-react';
-import './styles.css';
+import App from './App';
 
-type Product={id:number;name:string;model:string;storage:string;color:string;price:number;type:'novo'|'semi';image:string};
-const products:Product[]=[
- {id:1,name:'iPhone 16 Pro Max',model:'16 Pro Max',storage:'256 GB',color:'Titânio Deserto',price:8999,type:'novo',image:'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=900&q=85'},
- {id:2,name:'iPhone 16 Pro',model:'16 Pro',storage:'128 GB',color:'Titânio Preto',price:7499,type:'novo',image:'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=900&q=85'},
- {id:3,name:'iPhone 16',model:'16',storage:'128 GB',color:'Ultramarino',price:5999,type:'novo',image:'https://images.unsplash.com/photo-1726041266450-3e9e6aee2e7a?auto=format&fit=crop&w=900&q=85'},
- {id:4,name:'iPhone 15 Pro Max',model:'15 Pro Max',storage:'256 GB',color:'Titânio Natural',price:6799,type:'semi',image:'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=900&q=85'},
-];
-const money=(v:number)=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
-const whatsapp='https://wa.me/5561999999999';
-function App(){
- const [menu,setMenu]=useState(false); const [filter,setFilter]=useState<'all'|'novo'|'semi'>('all'); const [search,setSearch]=useState('');
- const filtered=products.filter(p=>(filter==='all'||p.type===filter)&&(p.name.toLowerCase().includes(search.toLowerCase())||p.model.toLowerCase().includes(search.toLowerCase())));
- return <div className="app">
-  <div className="announcement">SEVEN IMPORTS · IPHONES NO DISTRITO FEDERAL <span>Procedência + transparência + atendimento</span></div>
-  <header className="header"><div className="container nav"><button className="mobile-menu" onClick={()=>setMenu(!menu)} aria-label="Menu"><Menu/></button><a className="logo" href="#inicio"><b>7</b><span>SEVEN<small>IMPORTS</small></span></a><nav className={menu?'open':''}><a href="#produtos">iPhones</a><a href="#diferenciais">Por que nós</a><a href="#troca">Troque o seu</a><a href="#contato">Contato</a></nav><div className="nav-search"><Search size={17}/><input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Buscar iPhone"/></div><a className="whatsapp" href={whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={18}/> WhatsApp</a></div></header>
-  <main>
-   <section id="inicio" className="hero"><div className="hero-bg"></div><div className="container hero-grid"><div className="hero-copy"><span className="eyebrow">SEVEN IMPORTS · DISTRITO FEDERAL</span><h1>Seu próximo<br/><em>iPhone</em> está aqui.</h1><p>iPhones novos e seminovos selecionados, com procedência, transparência e atendimento de verdade.</p><div className="actions"><a className="btn primary" href="#produtos">Ver iPhones <ArrowRight size={18}/></a><a className="btn ghost" href={whatsapp} target="_blank" rel="noreferrer">Falar com a Seven</a></div><div className="checks"><span><Check/> Procedência verificada</span><span><Check/> Atendimento no DF</span><span><Check/> Compra segura</span></div></div><div className="hero-phone"><div className="phone"><div className="camera"><i></i><i></i><i></i></div><div className="phone-screen"><small>SEVEN</small><strong>IMPORTS</strong><span>YOUR NEXT IPHONE</span></div></div><div className="floating-card"><ShieldCheck/><div><b>Compra segura</b><small>Transparência em cada aparelho</small></div></div></div></div></section>
-   <section id="produtos" className="section"><div className="container"><div className="section-head"><div><span className="eyebrow">ESTOQUE EM DESTAQUE</span><h2>Escolha seu iPhone.</h2></div><span className="muted">Consulte disponibilidade</span></div><div className="filters"><button className={filter==='all'?'active':''} onClick={()=>setFilter('all')}>Todos</button><button className={filter==='novo'?'active':''} onClick={()=>setFilter('novo')}>Novos</button><button className={filter==='semi'?'active':''} onClick={()=>setFilter('semi')}>Seminovos</button></div><div className="product-grid">{filtered.map(p=><article className="product" key={p.id}><div className="product-image"><img src={p.image} alt={p.name}/><span>{p.type==='novo'?'NOVO':'SEMINOVO'}</span></div><div className="product-body"><small>{p.model} · {p.storage}</small><h3>{p.name}</h3><p>{p.color}</p><strong>{money(p.price)}</strong><a href={`${whatsapp}?text=${encodeURIComponent(`Olá, tenho interesse no ${p.name} ${p.storage}.`)}`} target="_blank" rel="noreferrer">Tenho interesse <ArrowRight size={16}/></a></div></article>)}</div>{filtered.length===0&&<div className="empty">Nenhum iPhone encontrado.</div>}</div></section>
-   <section id="diferenciais" className="dark-section section"><div className="container"><div className="center"><span className="eyebrow">POR QUE A SEVEN?</span><h2>Comprar um iPhone<br/>deveria ser simples.</h2><p>Você sabe o que está comprando, quanto vai pagar e quais informações importam.</p></div><div className="features"><div><b>01</b><Smartphone/><h3>Curadoria</h3><p>Selecionamos aparelhos pensando em estado, modelo e custo-benefício.</p></div><div><b>02</b><ShieldCheck/><h3>Transparência</h3><p>Informações claras sobre o aparelho e sua condição antes da compra.</p></div><div><b>03</b><MessageCircle/><h3>Atendimento</h3><p>Uma pessoa de verdade para ajudar você a escolher o modelo certo.</p></div></div></div></section>
-   <section id="troca" className="section trade"><div className="container trade-grid"><div><span className="eyebrow">SEU IPHONE VALE DINHEIRO</span><h2>Troque o seu<br/>pelo próximo.</h2><p>Envie modelo, capacidade, estado e fotos. Avaliamos e apresentamos uma proposta.</p><a className="btn primary" href={`${whatsapp}?text=Quero%20avaliar%20meu%20iPhone`} target="_blank" rel="noreferrer">Avaliar meu iPhone <ArrowRight size={18}/></a></div><div className="steps"><div><b>01</b><span>Você envia os dados</span></div><div><b>02</b><span>Avaliamos o aparelho</span></div><div><b>03</b><span>Recebe a proposta</span></div></div></div></section>
-   <section id="contato" className="contact"><div className="container contact-grid"><div><span className="eyebrow">FALE COM A SEVEN</span><h2>Vamos encontrar<br/>seu iPhone.</h2><p>Atendimento em todo o Distrito Federal. Consulte estoque e condições pelo WhatsApp.</p></div><a className="contact-box" href={whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={25}/><div><small>ATENDIMENTO</small><b>Conversar no WhatsApp</b><span>Resposta rápida · Distrito Federal</span></div><ArrowRight/></a></div></section>
-  </main>
-  <footer><div className="container footer"><a className="logo" href="#inicio"><b>7</b><span>SEVEN<small>IMPORTS</small></span></a><span>© 2026 Seven Imports · Distrito Federal</span><span>Revenda independente de produtos Apple.</span></div></footer>
-  {menu&&<button className="close-menu" onClick={()=>setMenu(false)}><X/></button>}
- </div>
-}
-createRoot(document.getElementById('root')!).render(<React.StrictMode><App/></React.StrictMode>);
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);
