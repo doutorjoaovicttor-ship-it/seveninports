@@ -11,6 +11,7 @@ import { TrustBar } from './components/TrustBar';
 import { WhySeven } from './components/WhySeven';
 import './styles.css';
 import './styles/hero.css';
+import './styles/brand.css';
 
 export default function App() {
   const [query, setQuery] = useState('');
