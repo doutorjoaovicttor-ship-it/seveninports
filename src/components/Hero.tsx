@@ -1,6 +1,5 @@
 import { ArrowDown, ArrowRight, CheckCircle2, MessageCircle, ShieldCheck, Sparkles } from 'lucide-react';
 import { hasWhatsApp, openWhatsApp } from '../lib/whatsapp';
-import '../styles/hero.css';
 
 export function Hero() {
   const whatsapp = openWhatsApp('Olá! Gostaria de consultar a disponibilidade de um iPhone na Seven Imports.');
