@@ -1,0 +1,5 @@
+import { ArrowRight, Check } from 'lucide-react';
+
+export function ExperienceSection() {
+  return <section id="sobre" className="section experience-section"><div className="container experience-grid"><div className="experience-image"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1400&q=90" alt="Tecnologia e smartphone em uma composição premium" loading="lazy" /></div><div className="experience-copy"><span className="eyebrow">A EXPERIÊNCIA SEVEN</span><h2>Mais do que vender tecnologia.</h2><p>Queremos tornar sua escolha mais simples, transparente e segura. Cada atendimento deve ser uma experiência clara, próxima e profissional.</p><ul><li><Check size={16} /> Atendimento personalizado</li><li><Check size={16} /> Transparência</li><li><Check size={16} /> Produtos selecionados</li><li><Check size={16} /> Experiência premium</li></ul><a className="text-link" href="#contato">Conheça a Seven Imports <ArrowRight size={15} /></a></div></div></section>;
+}
